@@ -12,23 +12,27 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Used for a default title
-#APP_NAME = 'ChucksList'   # Add
-APP_NAME = 'DeasList'
+
+APP_NAME = "Dea's List"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'g$iqqu&*mw4_sg3(#ld0sqaalxebel&168^yj%i&sgrw(fmn@w'
+#SECRET_KEY = ''
+
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
+#ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 
 # Application definition
 
@@ -42,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
 
     'ads.apps.AdsConfig',
+    #'cats.apps.CatsConfig',
 
     # Extensions - installed with pip3 / requirements.txt
     'django_extensions',

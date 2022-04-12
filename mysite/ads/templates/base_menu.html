@@ -1,8 +1,15 @@
 <meta name="dj4e" content="3ea816621e0d8ecd5e534ec28051d4d5">
 {% extends "base_bootstrap.html" %}
+{% load static %}
+<head>
+    <link type = "text/css" rel="stylesheet" href="{% static 'ads/style.css' %}">
+</head>
+
 {% block navbar %}
 {% load app_tags %}
-<nav class="navbar navbar-default navbar-inverse">
+
+<!-- <nav class="navbar navbar-default navbar-inverse"> -->
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
   <div class="container-fluid">
     <div class="navbar-header">
         <a class="navbar-brand" href="/">{{ settings.APP_NAME }}</a>
